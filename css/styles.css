@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "League Spartan", serif;
+  font-size: 0.9rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-container {
+  width: 1440px;
+  margin: auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+header {
+  height: 60vh;
+  width: 60%;
+  background: url(../images/desktop-image-hero-1.jpg) no-repeat center;
+  background-size: cover;
+  padding: 60px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 12px;
+}
+nav img {
+  margin-right: 40px;
+}
+nav ul {
+  display: flex;
+  gap: 30px;
+  font-size: 0.9rem;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li::after {
+  position: absolute;
+  content: "";
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  width: 0px;
+  height: 2px;
+  transition: width 0.3s ease;
+}
+
+nav ul li:hover::after {
+  width: 18px;
+}
+
+.description {
+  width: 40%;
+  padding: 120px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.description h2 {
+  font-size: 3rem;
+  line-height: 0.9;
+}
+.description p {
+  line-height: 1.5;
+  color: hsl(0, 0%, 63%);
+}
+.description .shop-button {
+  text-transform: uppercase;
+  border-style: none;
+  letter-spacing: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 10px 10px 10px 0px;
+}
+.description .buttons {
+  position: absolute;
+  width: 190px;
+  bottom: 0;
+  left: 0;
+}
+.description .buttons button {
+  background-color: black;
+  height: 80px;
+  width: 80px;
+  border-style: none;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+.description .buttons button:hover {
+  transition: opacity 0.3s ease;
+  opacity: 0.6;
+}
+
+@keyframes pointer {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.arrow-anim {
+  animation: pointer 1s ease infinite;
+}/*# sourceMappingURL=styles.css.map */

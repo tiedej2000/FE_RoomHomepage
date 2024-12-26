@@ -1,0 +1,116 @@
+@media (max-width: 600px) {
+  .main-container {
+    width: 100vw;
+    height: auto;
+  }
+  .hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    width: 100%;
+    height: 400px;
+    padding: 40px;
+    margin-bottom: 60px;
+  }
+  .description {
+    padding: 0 30px;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .description h2 {
+    font-size: 2.5rem;
+    max-width: 80vw;
+  }
+  .description p {
+    max-width: 330px;
+  }
+  .description .buttons {
+    top: -120px;
+    left: 294px;
+    width: 120px;
+  }
+  .description .buttons button {
+    height: 60px;
+    width: 60px;
+  }
+  .description .buttons button:hover {
+    background-color: white;
+    opacity: 1;
+  }
+  .about ul {
+    flex-direction: column;
+  }
+  .about ul .about-description {
+    width: 100%;
+    padding: 40px 30px;
+  }
+  .about ul .about-img img {
+    max-width: 100vw;
+  }
+  .logo {
+    margin-left: 130px;
+  }
+  .menu-toggle {
+    display: block;
+    max-height: 20vh;
+  }
+  .nav-buttons {
+    position: relative;
+  }
+  .nav-buttons .close-sidebar {
+    position: absolute;
+    top: -7px;
+    cursor: pointer;
+    max-height: 20vh;
+    z-index: 16;
+  }
+  .nav-buttons .menu-toggle {
+    position: absolute;
+    top: -7px;
+    cursor: pointer;
+  }
+  .sidebar {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: white;
+    display: grid;
+    place-content: center;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.15);
+    z-index: 14;
+    transition: top 0.3s ease;
+  }
+  .sidebar ul {
+    display: flex;
+    margin-top: 5px;
+  }
+  .sidebar ul li a {
+    color: black;
+  }
+  .sidebar.active {
+    top: 0;
+  }
+  .no-scroll {
+    overflow: hidden;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0;
+    z-index: 12;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  body.active::after {
+    opacity: 0.2;
+  }
+}/*# sourceMappingURL=mediaqueries.css.map */

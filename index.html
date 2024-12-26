@@ -10,19 +10,29 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Room homepage</title>
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/mediaqueries.css">
 </head>
 <body>
   <div class="main-container">
+
+    <!-- hero -->
+
     <div class="hero">
       <header>
         <nav>
-          <img src="./images/logo.svg" alt="room logo">
-          <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">shop</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">contact</a></li>
-          </ul>
+          <div class="nav-buttons">
+            <img class="menu-toggle" src="./images/icon-hamburger.svg" alt="">
+            <img class="close-sidebar" src="./images/icon-close.svg" alt="">
+          </div>
+          <img class="logo" src="./images/logo.svg" alt="room logo">
+          <div class="sidebar" id="sidebar">
+            <ul>
+              <li><a href="#">home</a></li>
+              <li><a href="#">shop</a></li>
+              <li><a href="#">about</a></li>
+              <li><a href="#">contact</a></li>
+            </ul>
+          </div>
         </nav>
       </header>
       <section class="description">
@@ -35,10 +45,34 @@
             <img class="arrow-anim" src="./images/icon-arrow.svg" alt="arrow pointing right">
           </div>
           <div class="buttons">
-            <button><img src="./images/icon-angle-left.svg" alt="button right"></button><button><img src="./images/icon-angle-right.svg" alt="button rght"></button>
+            <button class="left"><img src="./images/icon-angle-left.svg" alt="button right"></button><button class="right"><img src="./images/icon-angle-right.svg" alt="button rght"></button>
           </div>
       </section>
     </div>
+    <main>
+
+      <!-- about section -->
+
+      <section class="about">
+        <ul>
+          <li class="about-img">
+            <img src="./images/image-about-dark.jpg" alt="">
+          </li>
+          <li class="about-description">
+            <h3>about our furniture</h3>
+            <p>Our multifunctional collection blends design and function to suit your individual taste.
+              Make each room unique, or pick a cohesive theme that best express your interests and what
+              inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+              or anything in between. Product specialists are available to help you create your dream space.
+            </p>
+          </li>
+          <li class="about-img">
+            <img src="./images/image-about-light.jpg" alt="">
+          </li>
+        </ul>
+      </section>
+    </main>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

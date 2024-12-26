@@ -36,6 +36,7 @@ header {
   background: url(../images/desktop-image-hero-1.jpg) no-repeat center;
   background-size: cover;
   padding: 60px;
+  transition: opacity 0.15s ease;
 }
 
 nav {
@@ -50,6 +51,16 @@ nav ul {
   display: flex;
   gap: 30px;
   font-size: 0.9rem;
+}
+
+.menu-toggle {
+  display: none;
+  max-height: 0;
+}
+
+.close-sidebar {
+  display: none;
+  max-height: 0;
 }
 
 nav ul li {
@@ -73,8 +84,8 @@ nav ul li:hover::after {
 }
 
 .description {
-  width: 40%;
-  padding: 120px 80px;
+  width: 615px;
+  padding: 120px 100px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -83,10 +94,21 @@ nav ul li:hover::after {
 .description h2 {
   font-size: 3rem;
   line-height: 0.9;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(0);
+  opacity: 1;
 }
 .description p {
   line-height: 1.5;
   color: hsl(0, 0%, 63%);
+  max-width: 370px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.description .fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 .description .shop-button {
   text-transform: uppercase;
@@ -96,6 +118,9 @@ nav ul li:hover::after {
   cursor: pointer;
   background-color: transparent;
   padding: 10px 10px 10px 0px;
+}
+.description .shop-button:hover {
+  color: hsl(0, 0%, 63%);
 }
 .description .buttons {
   position: absolute;
@@ -129,5 +154,25 @@ nav ul li:hover::after {
   }
 }
 .arrow-anim {
-  animation: pointer 1s ease infinite;
+  animation: pointer 1.5s ease infinite;
+}
+
+.about {
+  width: 100%;
+}
+.about ul {
+  display: flex;
+}
+.about ul .about-description {
+  width: 600px;
+  padding: 60px 40px;
+}
+.about ul .about-description h3 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 0.5rem;
+}
+.about ul .about-description p {
+  line-height: 1.5;
+  color: hsl(0, 0%, 63%);
 }/*# sourceMappingURL=styles.css.map */
